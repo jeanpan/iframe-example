@@ -17,7 +17,7 @@
         return;
       }
       console.log(googletag);
-      console.log('-- onMessage --');
+      console.log('--- onMessage ---');
       console.log(evt);
       var data = evt.data;
       console.log(data);
@@ -29,6 +29,10 @@
         googletag.enableServices();
         googletag.display('div-gpt-ad-1516592715092-0');
       });
+    });
+    window.addEventListener('click', function(evt) {
+      console.log('--- onClick ---');
+      console.log(evt);
     });
   </script>
 </body>
