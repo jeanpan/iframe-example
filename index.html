@@ -13,7 +13,6 @@
   <script>
     var googletag = googletag || {};
     googletag.cmd = googletag.cmd || [];
-
     window.addEventListener('message', function(evt) {
       if (evt.origin !== 'app://05adb0d4-6948-584e-b670-5567b97d2959') {
         return;
@@ -26,7 +25,7 @@
       googletag.cmd.push(function() { 
         googletag.defineSlot('/30497360/native_v2/iu0/iu1/iu2', [300, 250], 'div-gpt-ad-1516592715092-0')
           .addService(googletag.pubads())
-          .setTargeting('interests', data.interests);
+          .setTargeting('topic', 'basketball');
         googletag.pubads().enableSingleRequest();
         googletag.enableServices();
         googletag.display('div-gpt-ad-1516592715092-0');
