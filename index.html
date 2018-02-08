@@ -21,15 +21,24 @@
       console.log('-- onMessage --');
       console.log(evt);
 
-      var googletag = googletag || {};  googletag.cmd = googletag.cmd || [];
+      console.log(googletag);
 
-      googletag.cmd.push(function() { 
-        googletag.defineSlot('/30497360/native_v2/iu0/iu1/iu2', [300, 250], 'div-gpt-ad-1516592715092-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();  
-      });
+      googletag.defineSlot('/30497360/native_v2/iu0/iu1/iu2', [300, 250], 'div-gpt-ad-1516592715092-0')
+        .addService(googletag.pubads())
+        .setTargeting("Gender", "Male");
+      googletag.pubads().enableSyncRendering();
+      googletag.enableServices();
+      googletag.display('div-gpt-ad-1516592715092-0');
 
-      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1516592715092-0'); });
+      // var googletag = googletag || {};  googletag.cmd = googletag.cmd || [];
+
+      // googletag.cmd.push(function() { 
+      //   googletag.defineSlot('/30497360/native_v2/iu0/iu1/iu2', [300, 250], 'div-gpt-ad-1516592715092-0').addService(googletag.pubads());
+      //   googletag.pubads().enableSingleRequest();
+      //   googletag.enableServices();  
+      // });
+
+      // googletag.cmd.push(function() { googletag.display('div-gpt-ad-1516592715092-0'); });
     }, false);
   </script>
 </body>
