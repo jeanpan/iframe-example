@@ -30,6 +30,10 @@
         googletag.display('div-gpt-ad-1516592715092-0');
       });
     });
+    document.addEventListener('keydown', function(evt) {
+      console.log('--- onKeydown ---');
+      console.log(evt);
+    });
     document.addEventListener('click', function(evt) {
       console.log('--- onClick ---');
       console.log(evt);
