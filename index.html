@@ -14,14 +14,13 @@
   <div id='div-gpt-ad-1516592715092-0' style='height:250px; width:300px;'></div>
 
   <script>
+    console.log(googletag);
     window.addEventListener('message', function(evt) {
       if (evt.origin !== 'app://05adb0d4-6948-584e-b670-5567b97d2959') {
         return;
       }
       console.log('-- onMessage --');
       console.log(evt);
-
-      console.log(googletag);
 
       // googletag.defineSlot('/30497360/native_v2/iu0/iu1/iu2', [300, 250], 'div-gpt-ad-1516592715092-0')
       //   .addService(googletag.pubads())
@@ -32,6 +31,8 @@
 
       var googletag = googletag || {};  googletag.cmd = googletag.cmd || [];
 
+      console.log(googletag);
+
       googletag.cmd.push(function() { 
         console.log('googletag push');
         googletag.defineSlot('/30497360/native_v2/iu0/iu1/iu2', [300, 250], 'div-gpt-ad-1516592715092-0').addService(googletag.pubads());
@@ -41,7 +42,7 @@
       });
 
       // googletag.cmd.push(function() {  });
-    }, false);
+    });
   </script>
 </body>
 
